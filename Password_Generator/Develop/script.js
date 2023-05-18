@@ -67,6 +67,7 @@ function writePassword() {
   }
     //but what if the user select one requirement and not the others? Create for all conditions first.
   }
+  //var password = generatePassword();
 
   
 
