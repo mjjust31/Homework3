@@ -13,20 +13,15 @@ var minRequirement = 8
 var maxRequirement = 128
 charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'()*+,-./:;<=>?@^_`{|}~";
 
-function makeRandom () {
-        for (var i = 0, a = charset.length; i < Number(User); ++i) 
-        {retVal += charset.charAt(Math.floor(Math.random() * a));}}
+//function makeRandom () {
+       // for (var i = 0, a = charset.length; i < Number(User); ++i) 
+       // {retVal += charset.charAt(Math.floor(Math.random() * a));}}
           
-
-
-
-
-//var characterRequirement = ["!","#","$","%","&'"]
-//var numberRequirement = ["0","1","2","3","4","5","6","7","8","9"]
-//var lowerLRequirement = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-//var upperLRequirement = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-
-//var allRequirements = [characterRequirement, numberRequirement, lowerLRequirement, upperLRequirement]
+var characterRequirement = ["!","#","$","%","&'"]
+var numberRequirement = ["0","1","2","3","4","5","6","7","8","9"]
+var lowerLRequirement = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+var upperLRequirement = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+var allRequirements = [characterRequirement, numberRequirement, lowerLRequirement, upperLRequirement]
 //var characterNumber = this cannot be right creating all the combitionations outcomes arrays. look in notes. 
 //var characterLower = 
 //var characterUpper =
@@ -48,20 +43,25 @@ function generatePassword() {
   if (Number(User) < minRequirement || Number(User) > maxRequirement) {
        alert("Password length must be between 8 and 128 characters. Please try again.");
        generatePassword(); } //stops user from continuing and re-sets the generatePassword function.
-  else {
-
-    var message = confirm("To create your password, please determine what should be included. One of the four options must be selected. Click ok to continue.")
-    var specChar= confirm("Click OK to confirm including special characters.");
-    var numChar = confirm("Click OK to confirm including numeric characters.");
-    var numLow =  confirm("Click OK to confirm including lowercase characters.");
-    var numUpper = confirm("Click OK to confirm including uppercase characters."); //if any, and, or of these are true, the user should go to the next phase.
+      else {
+          var message = confirm("To create your password, please determine what should be included. One of the four options must be selected. Click ok to continue.")
+          var specChar= confirm("Click OK to confirm including special characters.");
+          var numChar = confirm("Click OK to confirm including numeric characters.");
+          var numLow =  confirm("Click OK to confirm including lowercase characters.");
+          var numUpper = confirm("Click OK to confirm including uppercase characters."); //if any, and, or of these are true, the user should go to the next phase.
     //var allConditions = [specChar, numChar, numLow, numUpper] //this is an array of the user's choices.
+          if (Number(User) === !specChar || !numChar || !numLow || !numUpper) { //if it does not contain one of these 4. I need a variable because it must contain either one, two, three, and or all four.
+          alert("Must contatin at least one. Try again");
+          generatePassword();}
+          
+          else if (Number(User) === specChar|| numChar || numLow || numUpper) {
 
-    if (Number(User) === !specChar|| !numChar || !numLow || numUpper)  //if it does not contain one of these 4
-      alert("Must contatin at least one. Try again");
-      generatePassword();} 
-     
-  else if{
+
+        } //if it does not contain one of these 4)}
+
+
+          
+
 
 
   }  
@@ -78,6 +78,7 @@ function generatePassword() {
           return retVal;
         }
       }
+
   else { 
     if (specChar==true && numChar==true && numLow==true && numUpper==false){
       
@@ -124,14 +125,14 @@ function generatePassword() {
     console.log ("Testing")
     
   }
-  
+}
   }
 
   var passwordText = document.querySelector("#password");
 
   passwordText.value = generatePassword() ;
 
-}
+
 
 
 //((userInput === "r" && compPick === "s") || (userInput === "s" && compPick === "p") || (userInput === "p" && compPick === "r"))
