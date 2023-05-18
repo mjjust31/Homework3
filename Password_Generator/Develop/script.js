@@ -11,12 +11,12 @@ generateBtn.addEventListener("click", writePassword);
 
 var minRequirement = 8
 var maxRequirement = 128
-var characterRequirement = ["!","#","$","%","&'"]
-var numberRequirement = ["0","1","2","3","4","5","6","7","8","9"]
-var lowerLRequirement = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-var upperLRequirement = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+//var characterRequirement = ["!","#","$","%","&'"]
+//var numberRequirement = ["0","1","2","3","4","5","6","7","8","9"]
+//var lowerLRequirement = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+//var upperLRequirement = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
-var allRequirements = [characterRequirement, numberRequirement, lowerLRequirement, upperLRequirement]
+//var allRequirements = [characterRequirement, numberRequirement, lowerLRequirement, upperLRequirement]
 //var characterNumber = this cannot be right creating all the combitionations outcomes arrays. look in notes. 
 //var characterLower = 
 //var characterUpper =
@@ -41,19 +41,18 @@ function writePassword() {
   else {
    // var password = writePassword()//allRequirements || characterRequirement || numberRequirement || lowerLRequirement || upperLRequirement || );
   
-     var cont = confirm("To create your password, please determine what should be included. One option must be selected. Click ok to continue.")
-
+    var cont = confirm("To create your password, please determine what should be included. One option must be selected. Click ok to continue.")
     var specchar= confirm("Click OK to confirm including special characters.");
     var numchar = confirm("Click OK to confirm including numeric characters.");
     var numlow =  confirm("Click OK to confirm including lowercase characters.");
     var numupper = confirm("Click OK to confirm including uppercase characters.");
  
-    if (specchar==true && numchar==true && numlow==true && numupper==true)
-   {
+    if (specchar==true && numchar==true && numlow==true && numupper==true){  //needed to identify the true and false of the path. Pseduo code might change, but once you start and get the basic to work, then work on your if/else statements.
+     
     
     function generatePassword() {
      
-          charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+          charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'()*+,-./:;<=>?@^_`{|}~";
           retVal = "";
       for (var i = 0, n = charset.length; i < Number(User); ++i) {
           retVal += charset.charAt(Math.floor(Math.random() * n));
@@ -65,9 +64,9 @@ function writePassword() {
     console.log ("Testing")
     
   }
-    //but what if the user select one requirement and not the others? Create for all conditions first.
+  
   }
-  //var password = generatePassword();
+  
 
   
 
