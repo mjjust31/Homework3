@@ -4,7 +4,7 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generatePassword);
 //given to us.
 
 
@@ -13,7 +13,7 @@ var minRequirement = 8
 var maxRequirement = 128
 charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'()*+,-./:;<=>?@^_`{|}~";
 
-function makeRandom (length, charset) {
+function makeRandom () {
         for (var i = 0, a = charset.length; i < Number(User); ++i) 
         {retVal += charset.charAt(Math.floor(Math.random() * a));}}
           
@@ -42,20 +42,33 @@ function makeRandom (length, charset) {
 
 
 // Write password to the #password input
-function writePassword() {
+function generatePassword() {
   var User = prompt("How many characters would you like your password to contain. Enter a number between 8 and 128.");
 
   if (Number(User) < minRequirement || Number(User) > maxRequirement) {
        alert("Password length must be between 8 and 128 characters. Please try again.");
-       writePassword(); }
+       generatePassword(); } //stops user from continuing and re-sets the generatePassword function.
   else {
 
     var message = confirm("To create your password, please determine what should be included. One of the four options must be selected. Click ok to continue.")
     var specChar= confirm("Click OK to confirm including special characters.");
     var numChar = confirm("Click OK to confirm including numeric characters.");
     var numLow =  confirm("Click OK to confirm including lowercase characters.");
-    var numUpper = confirm("Click OK to confirm including uppercase characters.");
+    var numUpper = confirm("Click OK to confirm including uppercase characters."); //if any, and, or of these are true, the user should go to the next phase.
+    //var allConditions = [specChar, numChar, numLow, numUpper] //this is an array of the user's choices.
+
+    if (Number(User) === !specChar|| !numChar || !numLow || numUpper)  //if it does not contain one of these 4
+      alert("Must contatin at least one. Try again");
+      generatePassword();} 
+     
+  else if{
+
+
+  }  
+
+
  
+    
     if (specChar==true && numChar==true && numLow==true && numUpper==true){  //writing out each scenario.I wonder if there is a way to make an object to assign in the sceanior and have it equal to the user's choice.
           function generatePassword() {
      
@@ -72,7 +85,7 @@ function writePassword() {
      
         charset.toLowerCase();//this worked only pullin in lower cae letters. Search for others. 
         retVal = "";
-        for (var i = 0, b = charset.length; i < Number(User); ++i)
+        for (var i = 0, b = charset.length; i < Number(User); ++i)//make this a function to pull in repeatedlyin all scenarios.
         {retVal += charset.charAt(Math.floor(Math.random() * b));}
         return retVal;}     
           } 
@@ -119,7 +132,7 @@ function writePassword() {
   passwordText.value = generatePassword() ;
 
 }
-}
+
 
 //((userInput === "r" && compPick === "s") || (userInput === "s" && compPick === "p") || (userInput === "p" && compPick === "r"))
 //this was a faster way, but limited outcomes, but can we apply the same concept for shorter code?
