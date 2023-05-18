@@ -39,3 +39,6 @@ I was able to read the code back to determine what it is doing. However, I am re
 
 Reviewing for assignment: 
 https://www.youtube.com/watch?v=iKo9pDKKHnc
+
+Found the .some to find how to choose at least one variable:
+https://stackoverflow.com/questions/43851374/javascript-check-if-at-least-one-variable-is-true

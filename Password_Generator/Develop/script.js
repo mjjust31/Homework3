@@ -37,22 +37,23 @@ var allRequirements = [characterRequirement, numberRequirement, lowerLRequiremen
 
 
 // Write password to the #password input
-function generatePassword() {
+function writePassword() {
   var User = prompt("How many characters would you like your password to contain. Enter a number between 8 and 128.");
 
   if (Number(User) < minRequirement || Number(User) > maxRequirement) {
        alert("Password length must be between 8 and 128 characters. Please try again.");
-       generatePassword(); } //stops user from continuing and re-sets the generatePassword function.
+       writePassword(); } //stops user from continuing and re-sets the generatePassword function.
       else {
           var message = confirm("To create your password, please determine what should be included. One of the four options must be selected. Click ok to continue.")
           var specChar= confirm("Click OK to confirm including special characters.");
           var numChar = confirm("Click OK to confirm including numeric characters.");
           var numLow =  confirm("Click OK to confirm including lowercase characters.");
           var numUpper = confirm("Click OK to confirm including uppercase characters."); //if any, and, or of these are true, the user should go to the next phase.
-    //var allConditions = [specChar, numChar, numLow, numUpper] //this is an array of the user's choices.
-          if (Number(User) === !specChar || !numChar || !numLow || !numUpper) { //if it does not contain one of these 4. I need a variable because it must contain either one, two, three, and or all four.
+          var allCon = [specChar, numChar, numLow, numUpper] //this is an array of the user's choices.
+        
+          if (Number(User) === !specChar || !numChar|| !numLow|| !numUpper)  { //if it does not contain one of these 4. I need a variable because it must contain either one, two, three, and or all four.
           alert("Must contatin at least one. Try again");
-          generatePassword();}
+          writePassword();}
           
           else if (Number(User) === specChar|| numChar || numLow || numUpper) {
 
