@@ -42,3 +42,5 @@ https://www.youtube.com/watch?v=iKo9pDKKHnc
 
 Found the .some to find how to choose at least one variable:
 https://stackoverflow.com/questions/43851374/javascript-check-if-at-least-one-variable-is-true
+
+I found I don't understand how to connect anything, I had the beginning working before, and now I don't. I will have to study JavaScript and Web APIs over the weekend and try again for submission to hopefully increase the grade and so I don't fall too far behind everyone else.

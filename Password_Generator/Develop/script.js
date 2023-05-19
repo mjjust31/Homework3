@@ -21,7 +21,7 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 // Add event listener to generate button
-generateBtn.addEventListener("click", generatePassword);
+
 //given to us.
 
 
@@ -73,12 +73,15 @@ function writePassword() {
 
 
         } 
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = generatePassword() ;
+         
       }
  
+         var passwordText = document.querySelector("#password");
+         passwordText.value = generatePassword() ;
     }
+
+    generateBtn.addEventListener("click", generatePassword);
+
     //if (specChar==true && numChar==true && numLow==true && numUpper==true){  //writing out each scenario.I wonder if there is a way to make an object to assign in the sceanior and have it equal to the user's choice.
          // function generatePassword() {
 /*      
