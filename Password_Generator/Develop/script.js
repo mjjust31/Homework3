@@ -11,7 +11,7 @@
     //save it to a variable. X
     //if the user does not choose at least one of the 4 prompts, alert the user to choose at least one. X
 
-//check to make sure at least one of the 4 prompts is true
+//check to make sure at least one of the 4 prompts is true 
       //combine the confirmed arrays. If not alert user to restart.
 //create an array for uppercase, lowercase, numeric, and special characters
 //create an empty array for the password with length provided by user.
@@ -62,30 +62,27 @@ function writePassword() {
           var numLow =  confirm("Click OK to confirm including lowercase characters.");
           var numUpper = confirm("Click OK to confirm including uppercase characters."); //if any, and, or of these are true, the user should go to the next phase.
           var allCon = [specChar, numChar, numLow, numUpper] //this is an array of the user's choices.
-        
+       
+
+
           if (Number(User) === !specChar || !numChar|| !numLow|| !numUpper)  { //if it does not contain one of these 4. I need a variable because it must contain either one, two, three, and or all four.
           alert("Must contatin at least one. Try again");
           writePassword();}
           
-          else if (Number(User) === specChar|| numChar || numLow || numUpper) {
+          else if (Number(User) === specChar|| numChar || numLow || numUpper) { //if it does not contain one of these 4)}
 
 
-        } //if it does not contain one of these 4)}
+        } 
+  var passwordText = document.querySelector("#password");
 
-
-          
-
-
-
-  }  
-
-
+  passwordText.value = generatePassword() ;
+      }
  
-    
-    if (specChar==true && numChar==true && numLow==true && numUpper==true){  //writing out each scenario.I wonder if there is a way to make an object to assign in the sceanior and have it equal to the user's choice.
-          function generatePassword() {
-     
-          var retVal = "";
+    }
+    //if (specChar==true && numChar==true && numLow==true && numUpper==true){  //writing out each scenario.I wonder if there is a way to make an object to assign in the sceanior and have it equal to the user's choice.
+         // function generatePassword() {
+/*      
+         // var retVal = "";
           for (var i = 0, a = charset.length; i < Number(User); ++i) //having difficulty making this a fuction that is ran through multiple times.
           {retVal += charset.charAt(Math.floor(Math.random() * a));}
           return retVal;
@@ -126,7 +123,7 @@ function writePassword() {
               for (var i = 0, b = charset.length; i < Number(User); ++i)
               {retVal += charset.charAt(Math.floor(Math.random() * b));}
               return retVal;}      
-
+ */
 
 
 
@@ -134,16 +131,13 @@ function writePassword() {
 
   
   
-      } else {
+      
    
-    
+/*     
   }
-}
   }
-
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = generatePassword() ;
+  }
+ */
 
 
 
