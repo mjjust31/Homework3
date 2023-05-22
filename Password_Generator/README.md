@@ -35,7 +35,7 @@ I worked with a tutor to work on my approach to the problem along with the synta
     return retVal;
 }
 
-I was able to read the code back to determine what it is doing. However, I am revieiwng effiency options -toLowerCase and toUpperCase and trying to extract numbers. I also know that repeating the same code over and over again is not the best appraching, so I want to establish a function that can un for each different secaior to generate the password. I am also revieiwng to see if there is a better way to approach the scenarios. 
+I was able to read the code back to determine what it is doing. However, I am revieiwng effiency options -toLowerCase and toUpperCase and trying to extract numbers. I also know that repeating the same code over and over again is not the best approach, so I want to establish a function that can use be for each different scenario to generate the password. I am also revieiwng to see if there is a better way to approach the scenarios. 
 
 Reviewing for assignment: 
 https://www.youtube.com/watch?v=iKo9pDKKHnc
@@ -44,3 +44,5 @@ Found the .some to find how to choose at least one variable:
 https://stackoverflow.com/questions/43851374/javascript-check-if-at-least-one-variable-is-true
 
 I found I don't understand how to connect anything, I had the beginning working before, and now I don't. I will have to study JavaScript and Web APIs over the weekend and try again for submission to hopefully increase the grade and so I don't fall too far behind everyone else.
+
+I am also working a tutor to understand the While Loop function. This way, the While Loops is executed until a certain condition is met so restrictions are placed on the user to generate the password.
