@@ -5,7 +5,12 @@
   //  userInput = prompt("Enter a letter")
 //}
 //alert("Thank you. It was Y")
-
+var charReq= ["!","#","$","%","&'"] 
+var numReq = ["0","1","2","3","4","5","6","7","8","9"]
+var lowReq= ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+var upReq= ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+var allReq = [charReq.concat(numReq, lowReq, upReq)]
+//console.log(allReq)
 
 var generateBtn = document.querySelector("#generate");
 
@@ -23,12 +28,12 @@ function writePassword() {
   ) {
     //execute this if..
     if (
-      //if requirements do this
+      //if user does this
       passwordLengthReq > 128 ||
       passwordLengthReq < 8 ||
       passwordLengthReq === NaN
     ) {
-      alert("Number is not in between 8 and 128. Try again"); //execute this.
+      alert("Number is not in between 8 and 128. Try again"); //then you are going to do this.
     }
 
     var passwordLengthRaw = prompt( //this is the variable action to the user. 
@@ -47,7 +52,7 @@ function writePassword() {
   var numLow = undefined;
   var numUpper = undefined;
               //Enters in the While Loop //executes if the user does not define any of the conditions as true.
-  while (gotAnyCharTypes === undefined || gotAnyCharTypes === false) {
+  while (gotAnyCharTypes === undefined || gotAnyCharTypes !== true) {
     var specChar = confirm("Click OK to confirm including special characters."); //confirm will return a Boolean
     var numChar = confirm("Click OK to confirm including numeric characters.");//confirm will return a Boolean
     var numLow = confirm("Click OK to confirm including lowercase characters.");//confirm will return a Boolean
@@ -55,24 +60,19 @@ function writePassword() {
 
     gotAnyCharTypes = specChar || numChar || numLow || numUpper; //if true/true/true/true or even if //true/false/false/false, this will continue to generate password.
 
-    if (gotAnyCharTypes === false) {//if all listed as false. 
+    if (gotAnyCharTypes !== true) {//if all listed as false. or not true
       //but if ALL are marked as false. This returns to the var message rather than going back all the way to beginning.
       alert("Did not slect at least one type. Please choose one");
     }
   }
-
-  console.log(
-    "specChar",
-    specChar,
-    "numChar",
-    numChar,
-    "numLow",
-    numLow,
-    "numUpper",
-    numUpper
-  );
-
-  //var password = generatePassword();
+ 
+    
+ 
+ // var password = generatePassword();
+  //var retVal = "";
+    //for (var indx = 0; indx <= passwordLengthRaw; indx++)
+   // {retVal = allReq(Math.floor)(Math.random() * indx);
+  //  return retVal;}
 
   var passwordText = document.querySelector("#password");
 
