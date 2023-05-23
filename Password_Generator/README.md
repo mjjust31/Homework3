@@ -46,3 +46,6 @@ https://stackoverflow.com/questions/43851374/javascript-check-if-at-least-one-va
 I found I don't understand how to connect anything, I had the beginning working before, and now I don't. I will have to study JavaScript and Web APIs over the weekend and try again for submission to hopefully increase the grade and so I don't fall too far behind everyone else.
 
 I am also working a tutor to understand the While Loop function. This way, the While Loops is executed until a certain condition is met so restrictions are placed on the user to generate the password.
+
+
+My password is coming back as undefined. I know this is from how I initialized the While loop, but I am having trouble now defining it within the function. I know this related to the code's scope, but I can't seem to piece this together.
