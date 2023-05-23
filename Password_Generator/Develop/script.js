@@ -143,10 +143,14 @@ function writePassword() {
   //we will need the iterations here based on the number the user entered. so we will be working with
   //the number the user entered as that is a number. so let's write a function to excecute the picks.
   //What does the function need to do? From here it needs
-  var userReq = Number(passwordLengthReq);
+  
+
+  
   function generatePassword() {
-    for (indx = 0; indx < userReq.length; i++) {
-      var randomUserPick = userPick[Math.floor(Math.random() * userReq.length)];
+   
+
+    for (indx = 0; indx < passwordLengthReq.length; i++) {
+      var randomUserPick = userPick[Math.floor(Math.random() * passwordLengthReq.length)];
     }
   }
   var password = generatePassword();
