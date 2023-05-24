@@ -144,13 +144,16 @@ function writePassword() {
   //the number the user entered as that is a number. so let's write a function to excecute the picks.
   //What does the function need to do? From here it needs
   
+//returning undefined because of where my variable is listed in the fuction, it still believes that var is undefined.
 
-  
+var userPickLength = Number(passwordLengthReq)
+ 
+
   function generatePassword() {
    
 
-    for (indx = 0; indx < passwordLengthReq.length; i++) {
-      var randomUserPick = userPick[Math.floor(Math.random() * passwordLengthReq.length)];
+    for (indx = 0; indx <= userPickLength.length; i++) {
+      var randomUserPick = userPick[Math.floor(Math.random() * userPickLength.length)];
     }
   }
   var password = generatePassword();
