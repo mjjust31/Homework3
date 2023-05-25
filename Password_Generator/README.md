@@ -49,3 +49,5 @@ I am also working a tutor to understand the While Loop function. This way, the W
 
 
 My password is coming back as undefined. I know this is from how I initialized the While loop, but I am having trouble now defining it within the function. I know this related to the code's scope, but I can't seem to piece this together.
+
+I have started again on this assignment and tried to re-organize how I thought about the problem. I still want the user to be restricted from moving forward until the prompts are entered correctly. I need to focus more on the actual function for now rather than the restriction.
