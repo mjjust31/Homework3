@@ -138,11 +138,11 @@ function writePassword() {
 
   //returning undefined because of where my variable is listed in the fuction, it still believes that var is undefined.
   function generatePassword() {
-    var password = "";
+    var thePassword = "";
     for (i = 0; i < passwordLengthReq; i++) {
-    password += userPick[Math.floor(Math.random() * userPick.length)];
+      thePassword  += userPick[Math.floor(Math.random() * userPick.length)];
     }
-    return password;
+    return thePassword;
     }
     
 
